@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        file: [ packed ]
+        file: [ dpt-shell ]
 
     steps:
       - uses: actions/checkout@v3
@@ -36,10 +36,10 @@ jobs:
         run: ls --full-time
 
       - name: Prepare artifact
-        run:  zip -r -q packed.zip ./*
+        run:  echo "GitHub will auto compress artifact files,so skip compress."
         
       - name: Upload artifact to GitHub
         uses: actions/upload-artifact@v3
         with:
-          name: packed
-          path: packed.zip
+          name: dpt-shell
+          path: ./executable
