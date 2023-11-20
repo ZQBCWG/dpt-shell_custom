@@ -27,3 +27,5 @@ jobs:
         run: ./gradlew shell:build
       - name: Build dpt module
         run: ./gradlew dpt:build
+      - name: List files
+        run: ls -full-time
