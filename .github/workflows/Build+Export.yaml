@@ -41,5 +41,5 @@ jobs:
       - name: Upload artifact to GitHub
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ matrix.packed }}
+          name: packed
           path: packed.zip
